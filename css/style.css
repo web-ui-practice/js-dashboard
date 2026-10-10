@@ -18,7 +18,7 @@ aside {
 .logo-container {
  display: flex;
  align-items: center;
- margin: 0 16px 32px 16px;
+ margin: 0 16px 32px;
  width: 184px;
  height: 30px;
  text-decoration: none;
@@ -54,7 +54,6 @@ aside {
  align-items: center;
  padding: 12px;
  text-decoration: none;
- color: inherit;
  height: 44px;
  border-radius: 6px;
  color: #626D7D;
@@ -125,7 +124,6 @@ aside {
 }
 
 .header-block-about-user {
-  margin: 0;
   display: flex;
   gap: 10px;
   margin: 22px 32px 22px 0;
