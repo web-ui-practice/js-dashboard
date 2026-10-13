@@ -1,246 +1,277 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <title>JS Dashboard</title>
-</head>
-<body>
-   <aside>
-
-    <a class="logo-container" href="#">
-        <img class="logo" src="images/Brand-mark.svg" alt="">
+  </head>
+  <body>
+    <aside>
+      <a class="logo-container" href="#">
+        <img class="logo" src="images/Brand-mark.svg" alt="" />
         <span class="logo-title">Workspace</span>
-    </a>
+      </a>
 
-    <nav class="menu-container">
+      <nav class="menu-container">
         <ul class="flex-menu">
-            <li>
-                <a class="items-menu" aria-current="page" href="#">
-                    <img class="logo-menu" src="images/dashboard.svg" alt="">
-                    <span class="menu-text">Dashboard</span>
-                </a>
-            </li>
-            <li>
-                <a class="items-menu" href="#">
-                    <img class="logo-menu" src="images/users.svg" alt="">
-                    <span class="menu-text">Users</span>
-                </a>
-            </li>
-            <li>
-                <a class="items-menu" href="#">
-                    <img class="logo-menu" src="images/activity.svg" alt="">
-                    <span class="menu-text">Activity</span>
-                </a>
-            </li>
-            <li>
-                <a class="items-menu" href="#">
-                    <img class="logo-menu" src="images/settings.svg" alt="">
-                    <span class="menu-text">Settings</span>
-                </a>
-            </li>
+          <li>
+            <a
+              class="items-menu items-menu--disabled"
+              aria-current="page"
+              href="#"
+            >
+              <img class="logo-menu" src="images/dashboard.svg" alt="" />
+              <span class="menu-text">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a class="items-menu items-menu--disabled" href="#">
+              <img class="logo-menu" src="images/users.svg" alt="" />
+              <span class="menu-text">Users</span>
+            </a>
+          </li>
+          <li>
+            <a class="items-menu items-menu--disabled" href="#">
+              <img class="logo-menu" src="images/activity.svg" alt="" />
+              <span class="menu-text">Activity</span>
+            </a>
+          </li>
+          <li>
+            <a class="items-menu items-menu--disabled" href="#">
+              <img class="logo-menu" src="images/settings.svg" alt="" />
+              <span class="menu-text">Settings</span>
+            </a>
+          </li>
         </ul>
-    </nav>
+      </nav>
 
-    <footer class="footer-container">
+      <footer class="footer-container">
         <p class="footer-text-first">Acme Studio</p>
         <p class="footer-text-second">Team workspace</p>
-    </footer>
+      </footer>
+    </aside>
 
-   </aside>
-
-   <div class="container-header-main">
-     <header class="header">
-      <h1 class="header-title">Dashboard</h1>
-      <div class="header-block-about-user">
-         <span class="header-user-icon">MC</span>
-         <div class="header-user-info">
-          <span class="header-user-name">Maya Chen</span>
-          <span class="header-user-status">Workspace admin</span>
-         </div>
-      </div>
-     </header>
-   
-     <main>
-      <header class="header-workspace">
-        <h2 class="header-text-workspace">Workspace overview</h2>
-        <p class="header-text-value">A simple overview of your team and workspace access.</p>
+    <div class="container-header-main">
+      <header class="header">
+        <h1 class="header-title">Dashboard</h1>
+        <div class="header-block-about-user">
+          <span class="header-user-icon">MC</span>
+          <div class="header-user-info">
+            <span class="header-user-name">Maya Chen</span>
+            <span class="header-user-status">Workspace admin</span>
+          </div>
+        </div>
       </header>
 
-      <section class="card-stats">
-        <div class="card-block">
-          <div class="card-header">
-           <span class="card-text">Total users</span>
-           <img class="card-icon" src="images/user.svg" alt="">
+      <main>
+        <header class="header-workspace">
+          <h2 class="header-text-workspace">Workspace overview</h2>
+          <p class="header-text-value">
+            A simple overview of your team and workspace access.
+          </p>
+        </header>
+
+        <section class="card-stats">
+          <div class="card-block">
+            <div class="card-header">
+              <span class="card-text">Total users</span>
+              <img class="card-icon" src="images/user.svg" alt="" />
+            </div>
+
+            <span class="card-number">6</span>
+            <p class="card-value">Everyone in this workspace</p>
           </div>
 
-          <span class="card-number">6</span>
-          <p class="card-value">Everyone in this workspace</p>
-        </div>
+          <div class="card-block">
+            <div class="card-header">
+              <span class="card-text">Active users</span>
+              <img class="card-icon" src="images/user-check.svg" alt="" />
+            </div>
 
-        <div class="card-block">
-          <div class="card-header">
-           <span class="card-text">Active users</span>
-           <img class="card-icon" src="images/user-check.svg" alt="">
+            <span class="card-number">4</span>
+            <p class="card-value">Currently have access</p>
           </div>
 
-          <span class="card-number">4</span>
-          <p class="card-value">Currently have access</p>
-        </div>
+          <div class="card-block">
+            <div class="card-header">
+              <span class="card-text">Inactive users</span>
+              <img class="card-icon" src="images/user-x.svg" alt="" />
+            </div>
 
-        <div class="card-block">
-          <div class="card-header">
-           <span class="card-text">Inactive users</span>
-           <img class="card-icon" src="images/user-x.svg" alt="">
+            <span class="card-number">2</span>
+            <p class="card-value">Access is paused</p>
           </div>
+        </section>
 
-          <span class="card-number">2</span>
-          <p class="card-value">Access is paused</p>
-        </div>
-      </section>
-
-      <section class="searching-users">
-        <div class="searching-block">
-          <h2 class="searching-title">Users</h2>
-          <p class="searching-text">View your team and their workspace access.</p>
-        </div>
-        <div class="searching-string">
+        <section class="searching-users">
+          <div class="searching-block">
+            <h2 class="searching-title">Users</h2>
+            <p class="searching-text">
+              View your team and their workspace access.
+            </p>
+          </div>
+          <div class="searching-string">
             <div class="searching-container">
-             <img class="searching-icon" src="images/search.svg" alt="">
-             <input class="searching-input" placeholder="Search by name or email" type="text">
+              <img class="searching-icon" src="images/search.svg" alt="" />
+              <input
+                class="searching-input"
+                placeholder="Search by name or email"
+                type="text"
+              />
             </div>
             <select class="searching-selector" name="" id="">
-                <option class="searching-menu" value="All statuses">All statuses</option>
-                <option class="searching-menu" value="Active">Active</option>
-                <option class="searching-menu" value="Inactive">Inactive</option>
+              <option class="searching-menu" value="All statuses">
+                All statuses
+              </option>
+              <option class="searching-menu" value="Active">Active</option>
+              <option class="searching-menu" value="Inactive">Inactive</option>
             </select>
-        </div>
+          </div>
 
-       <table class="table-container">                     <!-- вся таблиця -->
-         <thead class="table-head">                   <!-- шапка таблиці (один раз) -->
-          <tr>                    <!-- рядок -->
-            <th class="table-heading">Name</th>         <!-- клітинка-заголовок колонки -->
-            <th class="table-heading table-heading--width-role">Role</th>
-            <th class="table-heading table-heading--width-status">Status</th>
-          </tr>
-         </thead>
+          <table class="table-container">
+            <!-- вся таблиця -->
+            <thead class="table-head">
+              <!-- шапка таблиці (один раз) -->
+              <tr>
+                <!-- рядок -->
+                <th class="table-heading">Name</th>
+                <!-- клітинка-заголовок колонки -->
+                <th class="table-heading table-heading--width-role">Role</th>
+                <th class="table-heading table-heading--width-status">
+                  Status
+                </th>
+              </tr>
+            </thead>
 
-           <tbody class="table-body">                   <!-- тіло таблиці: усі користувачі -->
-             <tr>                    <!-- один користувач = один рядок -->
-               <td>
-                <div class="user-container">                 <!-- клітинка колонки Name -->
-                 <span class="user-avatar">MC</span>     <!-- аватар з ініціалами -->
-                 <div class="user-info">               <!-- обгортка: ім'я над email -->
-                   <span class="user-name">Maya Chen</span>
-                   <span class="user-email">maya.chen@acme.example</span>
-                 </div>
-                </div> 
-               </td>
-               <td class="user-role">Admin</td>        <!-- клітинка колонки Role -->
-               <td>
-                 <span class="user-status user-status--active">Active</span> <!-- «бейдж» статусу -->
-               </td>
-             </tr>
+            <tbody class="table-body">
+              <!-- тіло таблиці: усі користувачі -->
+              <tr>
+                <!-- один користувач = один рядок -->
+                <td>
+                  <div class="user-container">
+                    <!-- клітинка колонки Name -->
+                    <span class="user-avatar">MC</span>
+                    <!-- аватар з ініціалами -->
+                    <div class="user-info">
+                      <!-- обгортка: ім'я над email -->
+                      <span class="user-name">Maya Chen</span>
+                      <span class="user-email">maya.chen@acme.example</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="user-role">Admin</td>
+                <!-- клітинка колонки Role -->
+                <td>
+                  <span class="user-status user-status--active">Active</span>
+                  <!-- «бейдж» статусу -->
+                </td>
+              </tr>
 
-             <tr>                   
-               <td>   
-                <div class="user-container">              
-                 <span class="user-avatar">OG</span>     
-                 <div class="user-info">               
-                   <span class="user-name">Oliver Grant</span>
-                   <span class="user-email">oliver.grant@acme.example</span>
-                 </div>
-                </div> 
-               </td>
-               <td class="user-role">Editor</td>        
-               <td>
-                 <span class="user-status user-status--active">Active</span> 
-               </td>
-             </tr>
+              <tr>
+                <td>
+                  <div class="user-container">
+                    <span class="user-avatar">OG</span>
+                    <div class="user-info">
+                      <span class="user-name">Oliver Grant</span>
+                      <span class="user-email">oliver.grant@acme.example</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="user-role">Editor</td>
+                <td>
+                  <span class="user-status user-status--active">Active</span>
+                </td>
+              </tr>
 
-             <tr>                   
-               <td>  
-                <div class="user-container">               
-                 <span class="user-avatar">SP</span>     
-                 <div class="user-info">               
-                   <span class="user-name">Sofia Patel</span>
-                   <span class="user-email">sofia.patel@acme.example</span>
-                 </div>
-                </div> 
-               </td>
-               <td class="user-role">Editor</td>        
-               <td>
-                 <span class="user-status user-status--active">Active</span> 
-               </td>
-             </tr>
+              <tr>
+                <td>
+                  <div class="user-container">
+                    <span class="user-avatar">SP</span>
+                    <div class="user-info">
+                      <span class="user-name">Sofia Patel</span>
+                      <span class="user-email">sofia.patel@acme.example</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="user-role">Editor</td>
+                <td>
+                  <span class="user-status user-status--active">Active</span>
+                </td>
+              </tr>
 
-             <tr>                   
-               <td>  
-                <div class="user-container">                
-                 <span class="user-avatar">LR</span>     
-                 <div class="user-info">              
-                   <span class="user-name">Lucas Reed</span>
-                   <span class="user-email">lucas.reed@acme.example</span>
-                 </div>
-                </div> 
-               </td>
-               <td class="user-role">Viewer</td>       
-               <td>
-                 <span class="user-status user-status--inactive">Inactive</span> 
-               </td>
-             </tr>
+              <tr>
+                <td>
+                  <div class="user-container">
+                    <span class="user-avatar">LR</span>
+                    <div class="user-info">
+                      <span class="user-name">Lucas Reed</span>
+                      <span class="user-email">lucas.reed@acme.example</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="user-role">Viewer</td>
+                <td>
+                  <span class="user-status user-status--inactive"
+                    >Inactive</span
+                  >
+                </td>
+              </tr>
 
-             <tr>                    
-               <td>    
-                <div class="user-container">             
-                 <span class="user-avatar">AO</span>     
-                 <div class="user-info">               
-                   <span class="user-name">Amara Okafor</span>
-                   <span class="user-email">amara.okafor@acme.example</span>
-                 </div>
-                </div>
-               </td>
-               <td class="user-role">Viewer</td>        
-               <td>
-                 <span class="user-status user-status--active">Active</span> 
-               </td>
-             </tr>
+              <tr>
+                <td>
+                  <div class="user-container">
+                    <span class="user-avatar">AO</span>
+                    <div class="user-info">
+                      <span class="user-name">Amara Okafor</span>
+                      <span class="user-email">amara.okafor@acme.example</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="user-role">Viewer</td>
+                <td>
+                  <span class="user-status user-status--active">Active</span>
+                </td>
+              </tr>
 
-             <tr>                   
-               <td>    
-                <div class="user-container">             
-                 <span class="user-avatar">NK</span>     
-                 <div class="user-info">               
-                   <span class="user-name">Noah Kim</span>
-                   <span class="user-email">noah.kim@acme.example</span>
-                 </div>
-                </div>
-               </td>
-               <td class="user-role">Editor</td>        
-               <td>
-                 <span class="user-status user-status--inactive">Inactive</span> 
-               </td>
-             </tr>
-           </tbody>
-       </table>
+              <tr>
+                <td>
+                  <div class="user-container">
+                    <span class="user-avatar">NK</span>
+                    <div class="user-info">
+                      <span class="user-name">Noah Kim</span>
+                      <span class="user-email">noah.kim@acme.example</span>
+                    </div>
+                  </div>
+                </td>
+                <td class="user-role">Editor</td>
+                <td>
+                  <span class="user-status user-status--inactive"
+                    >Inactive</span
+                  >
+                </td>
+              </tr>
+            </tbody>
+          </table>
 
-       <div class="container-table">
-        <p class="text-table">Showing 6 of 6 users</p>
-        <nav class="pagination-table" aria-label="Pagination">
-         <button class="buttons-table" disabled>Previous</button>
-         <span class="numbers-table">1</span>
-         <button class="buttons-table" disabled>Next</button>
-        </nav>
-       </div>
-       
-      </section>
-      <p class="footer-text">Select a user to view their details.</p>
-     </main>
-   </div>
- <script src="js/script.js"></script>
-</body>
+          <div class="container-table">
+            <p class="text-table">Showing 6 of 6 users</p>
+            <nav class="pagination-table" aria-label="Pagination">
+              <button class="buttons-table" disabled>Previous</button>
+              <span class="numbers-table">1</span>
+              <button class="buttons-table" disabled>Next</button>
+            </nav>
+          </div>
+        </section>
+        <p class="footer-text">Select a user to view their details.</p>
+      </main>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
 </html>
