@@ -1,15 +1,24 @@
 * {
   box-sizing: border-box;
 }
+
+:root {
+ --color-text: #626d7d;
+ --font-weight: 400;
+ --font-size: 12px;
+ --line-height: 145%;
+}
+
 body {
   margin: 0;
   display: flex;
   font-family: "Inter", sans-serif;
 }
+
 aside {
   padding-top: 24px;
   width: 216px;
-  border-right: 1px solid #829095;
+  border-right: 1px solid #E1E6ED;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -31,9 +40,9 @@ aside {
 }
 
 .logo-title {
-  line-height: 145%;
+  line-height: var(--line-height);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: var(--font-weight);
   margin-top: 2px;
   margin-left: 10px;
   margin-bottom: 2px;
@@ -55,13 +64,17 @@ aside {
   text-decoration: none;
   height: 44px;
   border-radius: 6px;
-  color: #626d7d;
+  color: var(--color-text);
 }
 
 .items-menu[aria-current="page"] {
   background-color: #eef4ff;
   color: #2563eb;
   font-weight: 600;
+}
+
+.items-menu--disabled {
+  cursor: not-allowed;
 }
 
 .logo-menu {
@@ -72,7 +85,7 @@ aside {
 .menu-text {
   padding-left: 12px;
   font-size: 14px;
-  line-height: 145%;
+  line-height: var(--line-height);
   font-weight: 500;
 }
 
@@ -91,15 +104,15 @@ aside {
   margin: 0;
   color: #202938;
   font-size: 13px;
-  line-height: 145%;
+  line-height: var(--line-height);
   font-weight: 600;
 }
 .footer-text-second {
   margin: 0;
-  font-size: 12px;
-  color: #626d7d;
+  font-size: var(--font-size);
+  color: var(--color-text);
   line-height: 145%;
-  font-weight: 400;
+  font-weight: var(--font-weight);
 }
 
 .container-header-main {
@@ -108,13 +121,13 @@ aside {
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #829095;
+  border-bottom: 1px solid #E1E6ED;
 }
 
 .header-title {
   font-size: 22px;
-  line-height: 145%;
-  font-weight: 400;
+  line-height: var(--line-height);
+  font-weight: var(--font-weight);
   color: #202938;
   margin-left: 32px;
   margin-top: 24px;
@@ -135,8 +148,9 @@ aside {
   width: 36px;
   height: 36px;
   color: #2459c4;
-  font-size: 12px;
+  font-size: var(--font-size);
   background-color: #2459c423;
+  font-weight: 600;
 }
 
 .header-user-info {
@@ -147,15 +161,15 @@ aside {
 .header-user-name {
   font-size: 13px;
   font-weight: 600;
-  line-height: 145%;
+  line-height: var(--line-height);
   width: 71px;
   height: 19px;
   color: #202938;
 }
 
 .header-user-status {
-  font-size: 12px;
-  font-weight: 400;
+  font-size: var(--font-size);
+  font-weight: var(--font-weight);
   line-height: 145%;
-  color: #626d7d;
+  color: var(--color-text);
 }
