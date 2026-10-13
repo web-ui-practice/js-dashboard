@@ -9,7 +9,7 @@ body {
 aside {
  padding-top: 24px;
  width: 216px;
- border-right: 1px solid #829095;
+ border-right: 1px solid #E1E6ED;
  display: flex;
  flex-direction: column;
  min-height: 100vh
@@ -111,7 +111,7 @@ aside {
 .header{
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #829095;
+  border-bottom: 1px solid #E1E6ED;
 }
 
 .header-title {
@@ -141,6 +141,7 @@ aside {
  color: #2459C4;
  font-size: 12px;
  background-color: #2459c423;
+ font-weight: 600;
 }
 
 .header-user-info {
@@ -247,6 +248,8 @@ main {
 
 .searching-users {
   background-color: #FFFFFF;
+  border: 1px solid #E1E6ED;
+  border-radius: 6px;
 }
 
 .searching-block {
@@ -325,4 +328,171 @@ main {
   background-repeat: no-repeat;
   background-position: right 12px center;
   padding-right: 36px;
+}
+
+.searching-menu {
+ color: #626D7D;
+ font-size: 12px;
+ font-weight: 400;
+ line-height: 145%;
+}
+
+.table-container {
+ border-collapse: collapse;
+ width: 100%;
+}
+
+.table-head {
+ background-color: #626d7d12;
+ border-top: 1px solid #E1E6ED;
+ border-bottom: 1px solid #E1E6ED;
+ height: 44px;
+}
+
+.table-heading {
+ padding-right: 24px;
+ padding-left: 24px;
+ color: #626D7D;
+ font-size: 12px;
+ line-height: 145%;
+ font-weight: 600;
+ text-align: start;
+}
+
+.table-heading--width-role {
+ width: 180px;
+}
+
+.table-heading--width-status {
+ width: 136px;
+}
+
+.table-body tr{
+ border-bottom: 1px solid #E1E6ED;
+}
+
+.table-body td {
+  padding-left: 24px;
+}
+
+.user-container {
+ display: flex;
+ gap: 12px;
+ padding-top: 16.5px;
+ padding-bottom: 16.5px;
+
+ 
+}
+
+.user-avatar {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ border-radius: 100px;
+ width: 36px;
+ height: 36px;
+ color: #2459C4;
+ font-size: 12px;
+ background-color: #2459c423;
+ font-weight: 600;
+}
+
+.user-info {
+ display: flex;
+ flex-direction: column;
+ gap: 2px;
+}
+
+.user-name {
+ font-size: 14px;
+ font-weight: 600;
+ line-height: 145%;
+ color: #202938;
+}
+
+.user-email {
+ color: #626D7D;
+ font-weight: 400;
+ font-size: 12px;
+ line-height: 145%;
+}
+
+.user-role {
+  width: 180px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 145%;
+  color: #202938;
+}
+
+.user-status {
+  border-radius: 100px;
+  padding: 4px 10px;
+  font-size: 12px;
+  line-height: 145%;
+  font-weight: 500;
+
+}
+
+.user-status--active {
+ color: #2459C4;
+ background-color: #2459c423;
+}
+
+.user-status--inactive {
+ color: #626D7D;
+ background-color: #F0F2F5;
+}
+
+.container-table {
+ display: flex;
+ justify-content: space-between;
+ padding: 20px;
+
+}
+
+.text-table {
+ color: #626D7D;
+ font-size: 12px;
+ font-weight: 400;
+ line-height: 145%;
+}
+
+.pagination-table {
+ display: flex;
+ gap: 8px;
+ align-items: center;
+}
+
+.buttons-table {
+ color: #9199A6;
+ font-weight: 600;
+ font-size: 14px;
+ line-height: 145%;
+ border-radius: 6px;
+ border: 1px solid #F0F2F5;
+ height: 40px;
+ padding-left: 16px;
+ padding-right: 16px;
+ 
+ 
+}
+
+.numbers-table {
+ width: 28px;
+ font-weight: 400;
+ line-height: 145%;
+ color: #202938;
+ font-size: 13px;
+ text-align: center;
+
+}
+
+.footer-text {
+  margin: 0;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 145%;
+  color: #626D7D;
+  height: 17px;
 }
