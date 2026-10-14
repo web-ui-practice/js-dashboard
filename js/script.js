@@ -49,11 +49,12 @@ function getInitials(name) {
    return word[0]
    }).join("")
 };
-console.log(getInitials("Oliver Grant"))
 
-users.forEach(function(user){
-    const row = document.createElement('tr');
-    row.innerHTML = `<td>
+function renderUsers(list) {
+    tableBody.innerHTML = ""
+    list.forEach(function(user){
+     const row = document.createElement('tr');
+     row.innerHTML = `<td>
                   <div class="user-container">
                     <span class="user-avatar">${getInitials(user.name)}</span>
                     <div class="user-info">
@@ -66,8 +67,10 @@ users.forEach(function(user){
                 <td>
                   <span class="user-status user-status--${user.status}">${user.status}</span>
                 </td>`;
-    tableBody.append(row)
-});
+     tableBody.append(row)
+    });
+}
 
+renderUsers(users)
 
 
