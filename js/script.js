@@ -73,4 +73,12 @@ function renderUsers(list) {
 
 renderUsers(users)
 
+const searchingInput = document.querySelector('.searching-input');
 
+searchingInput.addEventListener("input", function() {
+    const query = searchingInput.value.toLowerCase()
+    const filteredUsers = users.filter(user => {
+       return user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query);
+    })
+    renderUsers(filteredUsers)
+})
