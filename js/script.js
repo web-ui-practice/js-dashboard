@@ -45,6 +45,7 @@ const users = [
 const tableBody = document.querySelector(".table-body");
 const searchingInput = document.querySelector('.searching-input');
 const statusSelect = document.querySelector('.searching-selector');
+const showing = document.querySelector('.text-table');
 
 function getInitials(name) {
    return name.split(" ").map(function (word) {
@@ -73,21 +74,24 @@ function renderUsers(list) {
     });
 }
 
-renderUsers(users)
-
+applyFilters()
 
 function applyFilters() {
     const status = statusSelect.value
     const query = searchingInput.value.toLowerCase()
-    
+
     const filteredUsers = users.filter(user => {
     const matchesSearch = user.name.toLowerCase().includes(query) || user.email.toLowerCase().includes(query);
     const matchesStatus = status === "" || user.status === status
     return matchesSearch && matchesStatus
 })
     renderUsers(filteredUsers)
+    
+    showing.textContent = `Showing ${filteredUsers.length} of ${users.length} users`;
 }
 
 searchingInput.addEventListener("input",applyFilters);
 
 statusSelect.addEventListener("change",applyFilters)
+
+
