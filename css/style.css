@@ -498,3 +498,7 @@ main {
   color: var(--color-text);
   height: 17px;
 }
+
+input, select, button {
+  font-family: inherit;
+}
