@@ -106,4 +106,6 @@ searchingInput.addEventListener("input",applyFilters);
 
 statusSelect.addEventListener("change",applyFilters)
 
+document.querySelector(".modal").showModal()
+
 

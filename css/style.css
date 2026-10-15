@@ -7,6 +7,7 @@
   --font-weight: 400;
   --font-size: 12px;
   --line-height: 145%;
+  --border-color: #E1E6ED;
 }
 
 body {
@@ -18,7 +19,7 @@ body {
 aside {
   padding-top: 24px;
   width: 216px;
-  border-right: 1px solid #e1e6ed;
+  border-right: 1px solid var(--border-color);
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -123,7 +124,7 @@ aside {
 .header {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid #e1e6ed;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .header-title {
@@ -215,7 +216,7 @@ main {
 
 .card-block {
   border-radius: 8px;
-  border: solid 1px #e1e6ed;
+  border: solid 1px var(--border-color);
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -258,7 +259,7 @@ main {
 
 .searching-users {
   background-color: #ffffff;
-  border: 1px solid #e1e6ed;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
 }
 
@@ -301,7 +302,7 @@ main {
   padding-right: 12px;
   padding-left: 12px;
   border-radius: 6px;
-  border: 1px solid #e1e6ed;
+  border: 1px solid var(--border-color);
   flex: 1;
   height: 44px;
 }
@@ -325,7 +326,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border: 1px solid #e1e6ed;
+  border: 1px solid var(--border-color);
   border-radius: 6px;
   padding-left: 12px;
   padding-right: 12px;
@@ -352,8 +353,8 @@ main {
 
 .table-head {
   background-color: #626d7d12;
-  border-top: 1px solid #e1e6ed;
-  border-bottom: 1px solid #e1e6ed;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
   height: 44px;
 }
 
@@ -376,7 +377,7 @@ main {
 }
 
 .table-body tr {
-  border-bottom: 1px solid #e1e6ed;
+  border-bottom: 1px solid var(--border-color);
 }
 
 .table-body td {
@@ -475,7 +476,7 @@ main {
   font-size: 14px;
   line-height: var(--line-height);
   border-radius: 6px;
-  border: 1px solid #f0f2f5;
+  border: 1px solid var(--border-color);
   height: 40px;
   padding-left: 16px;
   padding-right: 16px;
@@ -497,6 +498,140 @@ main {
   line-height: var(--line-height);
   color: var(--color-text);
   height: 17px;
+}
+
+.modal {
+ width: 480px;
+ border-radius: 6px;
+ border: 1px solid var(--border-color);
+ padding: 0;
+}
+
+.modal::backdrop {
+  background-color: #18223366;
+}
+
+.modal-header {
+ border-bottom: 1px solid var(--border-color);
+ display: flex;
+ align-items: center;
+ justify-content: space-between;
+ padding: 20px 24px 16px;
+}
+
+.modal-title {
+ margin: 0;
+ color: #202938;
+ font-weight: var(--font-weight);
+ font-size: 20px;
+ line-height: var(--line-height);
+}
+
+.modal-close {
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 40px;
+ height: 40px;
+ border-radius: 6px;
+ border: 2px solid #2459C4;
+ background-color: #ffffff;
+ cursor: pointer;
+}
+
+.modal-close-icon {
+ width: 20px;
+ height: 20px;
+}
+
+.modal-body {
+ padding: 24px;
+ border-bottom: 1px solid var(--border-color);
+}
+
+.modal-user {
+ display: flex;
+ gap: 14px;
+}
+
+.modal-initials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 56px;
+  height: 56px;
+  color: #2459c4;
+  background-color: #2459c423;
+  font-weight: 600;
+  font-size: 20px;
+}
+
+.modal-user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-user-name {
+ font-size: 18px;
+ font-weight: var(--font-weight);
+ line-height: var(--line-height);
+ color: #202938;
+}
+
+.modal-workspace {
+  font-size: 13px;
+  font-weight: var(--font-weight);
+  line-height: var(--line-height);
+  color: var(--color-text);
+}
+
+.modal-details {
+ display: grid;
+ grid-template-columns: 1fr 1fr;
+ gap: 24px;
+}
+
+.modal-detail {
+ display: flex;
+ flex-direction: column;
+ gap: 6px;
+}
+
+.modal-detail--width {
+ grid-column: 1 / -1;
+}
+
+.modal-label {
+ color: var(--color-text);
+ font-weight: var(--font-weight);
+ font-size: var(--font-size);
+ line-height: var(--line-height);
+}
+
+.modal-value {
+ margin: 0;
+ color: #202938;
+ font-size: 14px;
+ font-weight: var(--font-weight);
+ line-height: var(--line-height);
+}
+
+.modal-footer {
+ display: flex;
+ justify-content: flex-end;
+ padding: 16px 24px;
+}
+
+.modal-button {
+ height: 40px;
+ color: #ffffff;
+ background-color: #2459C4;
+ padding-left: 16px;
+ padding-right: 16px;
+ border-radius: 6px;
+ border: 1px solid var(--border-color);
+ cursor: pointer;
 }
 
 input, select, button {
