@@ -378,6 +378,11 @@ main {
 
 .table-body tr {
   border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+}
+.table-body tr:hover,
+.table-body tr:focus-visible {
+  background-color: #EDF3FF;
 }
 
 .table-body td {
