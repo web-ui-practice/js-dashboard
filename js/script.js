@@ -101,8 +101,15 @@ function renderUsers(list) {
     tableBody.innerHTML = ""
     list.forEach(function(user){
      const row = document.createElement('tr');
+     row.tabIndex = 0;
      row.addEventListener("click", () => {
         openUserModal(user)
+     })
+     row.addEventListener("keydown",function (event) {
+        if(event.key === "Enter") {
+            event.preventDefault()
+            openUserModal(user)
+        }
      })
      row.innerHTML = `<td>
                   <div class="user-container">
@@ -137,7 +144,4 @@ function applyFilters() {
     showing.textContent = `Showing ${filteredUsers.length} of ${users.length} users`;
 }
 
-searchingInput.addEventListener("input",applyFilters);
-
-statusSelect.addEventListener("change",applyFilters)
 
