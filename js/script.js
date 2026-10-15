@@ -4,6 +4,8 @@ const users = [
         email: "maya.chen@acme.example",
         role: "Admin",
         status: "active",
+        memberSince: "Sep 12, 2025",
+        lastActive: "Today, 9:41 AM",
     },
 
     {
@@ -11,6 +13,8 @@ const users = [
         email: "oliver.grant@acme.example",
         role: "Editor",
         status: "active",
+        memberSince: "Oct 10, 2025",
+        lastActive: "Today, 8:31 PM",
     },
 
     {
@@ -18,6 +22,8 @@ const users = [
         email: "sofia.patel@acme.example",
         role: "Editor",
         status: "active",
+        memberSince: "Sep 8, 2025",
+        lastAcrive: "Yesterday, 8:24 AM",
     },
 
     {
@@ -25,6 +31,8 @@ const users = [
         email: "lucas.reed@acme.example",
         role: "Viewer",
         status: "inactive",
+        memberSince: "Nov 15, 2025",
+        lastActive: "Today, 9:37 AM",
     },
 
     {
@@ -32,6 +40,8 @@ const users = [
         email: "amara.okafor@acme.example",
         role: "Viewer",
         status: "active",
+        memberSince: "Sep 26, 2025",
+        lastActive: "Today, 12:19 AM",
     },
 
     {
@@ -39,6 +49,8 @@ const users = [
         email: "noah.kim@acme.example",
         role: "Editor",
         status: "inactive",
+        memberSince: "Oct 28, 2025",
+        lastActive: "Yesterday, 10:15 PM",
     }
 ];
 
