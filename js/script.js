@@ -66,6 +66,13 @@ const modalRole = document.querySelector('#modal-role');
 const modalStatus = document.querySelector('#modal-status');
 const modalMemberSince = document.querySelector('#modal-member-since');
 const modalLastActive = document.querySelector('#modal-last-active');
+const modalClose = document.querySelector('#modal-close');
+const modalCloseButton = document.querySelector('#modal-close-button');
+
+searchingInput.addEventListener("input",applyFilters);
+statusSelect.addEventListener("change",applyFilters);
+modalClose.addEventListener("click", () => modal.close());
+modalCloseButton.addEventListener("click",() => modal.close());
 
 
 
