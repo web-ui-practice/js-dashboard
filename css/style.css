@@ -511,6 +511,10 @@ main {
   background-color: #18223366;
 }
 
+body:has(.modal[open]) {
+  overflow: hidden;
+}
+
 .modal-header {
  border-bottom: 1px solid var(--border-color);
  display: flex;
