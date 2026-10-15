@@ -73,8 +73,11 @@ searchingInput.addEventListener("input",applyFilters);
 statusSelect.addEventListener("change",applyFilters);
 modalClose.addEventListener("click", () => modal.close());
 modalCloseButton.addEventListener("click",() => modal.close());
-
-
+modal.addEventListener("click", function(event) {
+    if(event.target === modal) {
+        modal.close()
+    }
+});
 
 function getInitials(name) {
    return name.split(" ").map(function (word) {
