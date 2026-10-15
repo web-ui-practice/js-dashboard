@@ -123,9 +123,7 @@
               />
             </div>
             <select class="searching-selector" name="" id="">
-              <option class="searching-menu" value="">
-                All statuses
-              </option>
+              <option class="searching-menu" value="">All statuses</option>
               <option class="searching-menu" value="active">Active</option>
               <option class="searching-menu" value="inactive">Inactive</option>
             </select>
@@ -156,6 +154,52 @@
         <p class="footer-text">Select a user to view their details.</p>
       </main>
     </div>
+
+    <dialog open="" aria-labelledby="title-modal-window">
+      <header>
+        <h2 id="title-modal-window">User details</h2>
+        <button aria-label="Close modal window">
+          <img src="images/x.svg" alt="" />
+        </button>
+      </header>
+
+      <section>
+        <div class="block-about-user">
+          <span class="user-icon">MC</span>
+          <div class="user-info">
+            <span class="user-name">Maya Chen</span>
+            <span class="user-status">Acme Studio</span>
+          </div>
+        </div>
+        <dl>
+          <div>
+            <dt>Email address</dt>
+            <dd>maya.chen@acme.example</dd>
+          </div>
+          <div>
+            <dt>Role</dt>
+            <dd>Admin</dd>
+          </div>
+          <div>
+            <dt>Status</dt>
+            <dd>Active</dd>
+          </div>
+          <div>
+            <dt>Member Since</dt>
+            <dd>Sep 12,2025</dd>
+          </div>
+          <div>
+            <dt>Last active</dt>
+            <dd>Today,9:41 AM</dd>
+          </div>
+        </dl>
+      </section>
+
+      <footer>
+        <button>Close</button>
+      </footer>
+    </dialog>
+
     <script src="js/script.js"></script>
   </body>
 </html>
