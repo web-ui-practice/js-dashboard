@@ -58,6 +58,16 @@ const tableBody = document.querySelector(".table-body");
 const searchingInput = document.querySelector('.searching-input');
 const statusSelect = document.querySelector('.searching-selector');
 const showing = document.querySelector('.text-table');
+const modal = document.querySelector('.modal');
+const modalInitials = document.querySelector('#modal-initials');
+const modalName = document.querySelector('#modal-name');
+const modalEmail = document.querySelector('#modal-email');
+const modalRole = document.querySelector('#modal-role');
+const modalStatus = document.querySelector('#modal-status');
+const modalMemberSince = document.querySelector('#modal-member-since');
+const modalLastActive = document.querySelector('#modal-last-active');
+
+
 
 function getInitials(name) {
    return name.split(" ").map(function (word) {
@@ -65,10 +75,25 @@ function getInitials(name) {
    }).join("")
 };
 
+function openUserModal (user) {
+ modalStatus.className = `user-status user-status--${user.status}`;
+ modalInitials.textContent = getInitials(user.name);
+ modalName.textContent = user.name;
+ modalEmail.textContent = user.email;
+ modalRole.textContent = user.role;
+ modalStatus.textContent = user.status;
+ modalMemberSince.textContent = user.memberSince;
+ modalLastActive.textContent = user.lastActive;
+ modal.showModal()
+}
+
 function renderUsers(list) {
     tableBody.innerHTML = ""
     list.forEach(function(user){
      const row = document.createElement('tr');
+     row.addEventListener("click", () => {
+        openUserModal(user)
+     })
      row.innerHTML = `<td>
                   <div class="user-container">
                     <span class="user-avatar">${getInitials(user.name)}</span>
@@ -105,7 +130,4 @@ function applyFilters() {
 searchingInput.addEventListener("input",applyFilters);
 
 statusSelect.addEventListener("change",applyFilters)
-
-document.querySelector(".modal").showModal()
-
 
