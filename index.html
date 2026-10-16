@@ -53,6 +53,7 @@
         <p class="footer-text-second">Team workspace</p>
       </footer>
     </aside>
+
     <div class="container-header-main">
       <header class="header">
         <h1 class="header-title">Dashboard</h1>
@@ -65,7 +66,95 @@
         </div>
       </header>
 
-      <main></main>
+      <main>
+        <header class="header-workspace">
+          <h2 class="header-text-workspace">Workspace overview</h2>
+          <p class="header-text-value">
+            A simple overview of your team and workspace access.
+          </p>
+        </header>
+
+        <section class="card-stats">
+          <div class="card-block">
+            <div class="card-header">
+              <span class="card-text">Total users</span>
+              <img class="card-icon" src="images/user.svg" alt="" />
+            </div>
+
+            <span class="card-number">6</span>
+            <p class="card-value">Everyone in this workspace</p>
+          </div>
+
+          <div class="card-block">
+            <div class="card-header">
+              <span class="card-text">Active users</span>
+              <img class="card-icon" src="images/user-check.svg" alt="" />
+            </div>
+
+            <span class="card-number">4</span>
+            <p class="card-value">Currently have access</p>
+          </div>
+
+          <div class="card-block">
+            <div class="card-header">
+              <span class="card-text">Inactive users</span>
+              <img class="card-icon" src="images/user-x.svg" alt="" />
+            </div>
+
+            <span class="card-number">2</span>
+            <p class="card-value">Access is paused</p>
+          </div>
+        </section>
+
+        <section class="searching-users">
+          <div class="searching-block">
+            <h2 class="searching-title">Users</h2>
+            <p class="searching-text">
+              View your team and their workspace access.
+            </p>
+          </div>
+          <div class="searching-string">
+            <div class="searching-container">
+              <img class="searching-icon" src="images/search.svg" alt="" />
+              <input
+                class="searching-input"
+                placeholder="Search by name or email"
+                type="text"
+              />
+            </div>
+            <select class="searching-selector" name="" id="">
+              <option class="searching-menu" value="">
+                All statuses
+              </option>
+              <option class="searching-menu" value="active">Active</option>
+              <option class="searching-menu" value="inactive">Inactive</option>
+            </select>
+          </div>
+
+          <table class="table-container">
+            <thead class="table-head">
+              <tr>
+                <th class="table-heading">Name</th>
+                <th class="table-heading table-heading--width-role">Role</th>
+                <th class="table-heading table-heading--width-status">
+                  Status
+                </th>
+              </tr>
+            </thead>
+            <tbody class="table-body"></tbody>
+          </table>
+
+          <div class="container-table">
+            <p class="text-table">Showing 6 of 6 users</p>
+            <nav class="pagination-table" aria-label="Pagination">
+              <button class="buttons-table" disabled>Previous</button>
+              <span class="numbers-table">1</span>
+              <button class="buttons-table" disabled>Next</button>
+            </nav>
+          </div>
+        </section>
+        <p class="footer-text">Select a user to view their details.</p>
+      </main>
     </div>
     <script src="js/script.js"></script>
   </body>
