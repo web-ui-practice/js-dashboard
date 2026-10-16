@@ -4,6 +4,8 @@ const users = [
         email: "maya.chen@acme.example",
         role: "Admin",
         status: "active",
+        memberSince: "Sep 12, 2025",
+        lastActive: "Today, 9:41 AM",
     },
 
     {
@@ -11,6 +13,8 @@ const users = [
         email: "oliver.grant@acme.example",
         role: "Editor",
         status: "active",
+        memberSince: "Oct 10, 2025",
+        lastActive: "Today, 8:31 PM",
     },
 
     {
@@ -18,6 +22,8 @@ const users = [
         email: "sofia.patel@acme.example",
         role: "Editor",
         status: "active",
+        memberSince: "Sep 8, 2025",
+        lastAcrive: "Yesterday, 8:24 AM",
     },
 
     {
@@ -25,6 +31,8 @@ const users = [
         email: "lucas.reed@acme.example",
         role: "Viewer",
         status: "inactive",
+        memberSince: "Nov 15, 2025",
+        lastActive: "Today, 9:37 AM",
     },
 
     {
@@ -32,6 +40,8 @@ const users = [
         email: "amara.okafor@acme.example",
         role: "Viewer",
         status: "active",
+        memberSince: "Sep 26, 2025",
+        lastActive: "Today, 12:19 AM",
     },
 
     {
@@ -39,6 +49,8 @@ const users = [
         email: "noah.kim@acme.example",
         role: "Editor",
         status: "inactive",
+        memberSince: "Oct 28, 2025",
+        lastActive: "Yesterday, 10:15 PM",
     }
 ];
 
@@ -46,6 +58,26 @@ const tableBody = document.querySelector(".table-body");
 const searchingInput = document.querySelector('.searching-input');
 const statusSelect = document.querySelector('.searching-selector');
 const showing = document.querySelector('.text-table');
+const modal = document.querySelector('.modal');
+const modalInitials = document.querySelector('#modal-initials');
+const modalName = document.querySelector('#modal-name');
+const modalEmail = document.querySelector('#modal-email');
+const modalRole = document.querySelector('#modal-role');
+const modalStatus = document.querySelector('#modal-status');
+const modalMemberSince = document.querySelector('#modal-member-since');
+const modalLastActive = document.querySelector('#modal-last-active');
+const modalClose = document.querySelector('#modal-close');
+const modalCloseButton = document.querySelector('#modal-close-button');
+
+searchingInput.addEventListener("input",applyFilters);
+statusSelect.addEventListener("change",applyFilters);
+modalClose.addEventListener("click", () => modal.close());
+modalCloseButton.addEventListener("click",() => modal.close());
+modal.addEventListener("click", function(event) {
+    if(event.target === modal) {
+        modal.close()
+    }
+});
 
 function getInitials(name) {
    return name.split(" ").map(function (word) {
@@ -53,10 +85,32 @@ function getInitials(name) {
    }).join("")
 };
 
+function openUserModal (user) {
+ modalStatus.className = `user-status user-status--${user.status}`;
+ modalInitials.textContent = getInitials(user.name);
+ modalName.textContent = user.name;
+ modalEmail.textContent = user.email;
+ modalRole.textContent = user.role;
+ modalStatus.textContent = user.status;
+ modalMemberSince.textContent = user.memberSince;
+ modalLastActive.textContent = user.lastActive;
+ modal.showModal()
+}
+
 function renderUsers(list) {
     tableBody.innerHTML = ""
     list.forEach(function(user){
      const row = document.createElement('tr');
+     row.tabIndex = 0;
+     row.addEventListener("click", () => {
+        openUserModal(user)
+     })
+     row.addEventListener("keydown",function (event) {
+        if(event.key === "Enter") {
+            event.preventDefault()
+            openUserModal(user)
+        }
+     })
      row.innerHTML = `<td>
                   <div class="user-container">
                     <span class="user-avatar">${getInitials(user.name)}</span>
@@ -89,9 +143,5 @@ function applyFilters() {
     
     showing.textContent = `Showing ${filteredUsers.length} of ${users.length} users`;
 }
-
-searchingInput.addEventListener("input",applyFilters);
-
-statusSelect.addEventListener("change",applyFilters)
 
 
