@@ -73,6 +73,8 @@ function getModalElements () {
     }
 }
 
+const modal = getModalElements();
+
 searchingInput.addEventListener("input",applyFilters);
 statusSelect.addEventListener("change",applyFilters);
 modal.closeIcon.addEventListener("click", () => modal.dialog.close());
