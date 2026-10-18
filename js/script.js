@@ -58,24 +58,28 @@ const tableBody = document.querySelector(".table-body");
 const searchingInput = document.querySelector('.searching-input');
 const statusSelect = document.querySelector('.searching-selector');
 const showing = document.querySelector('.text-table');
-const modal = document.querySelector('.modal');
-const modalInitials = document.querySelector('#modal-initials');
-const modalName = document.querySelector('#modal-name');
-const modalEmail = document.querySelector('#modal-email');
-const modalRole = document.querySelector('#modal-role');
-const modalStatus = document.querySelector('#modal-status');
-const modalMemberSince = document.querySelector('#modal-member-since');
-const modalLastActive = document.querySelector('#modal-last-active');
-const modalClose = document.querySelector('#modal-close');
-const modalCloseButton = document.querySelector('#modal-close-button');
+function getModalElements () {
+    return {
+        dialog: document.querySelector(".modal"),
+        name: document.querySelector("#modal-name"),
+        email: document.querySelector('#modal-email'),
+        role:  document.querySelector('#modal-role'),
+        initials: document.querySelector('#modal-initials'),
+        status: document.querySelector('#modal-status'),
+        memberSince: document.querySelector('#modal-member-since'),
+        lastActive: document.querySelector('#modal-last-active'),
+        closeIcon: document.querySelector('#modal-close'),
+        closeButton: document.querySelector('#modal-close-button'),
+    }
+}
 
 searchingInput.addEventListener("input",applyFilters);
 statusSelect.addEventListener("change",applyFilters);
-modalClose.addEventListener("click", () => modal.close());
-modalCloseButton.addEventListener("click",() => modal.close());
-modal.addEventListener("click", function(event) {
-    if(event.target === modal) {
-        modal.close()
+modal.closeIcon.addEventListener("click", () => modal.dialog.close());
+modal.closeButton.addEventListener("click",() => modal.dialog.close());
+modal.dialog.addEventListener("click", function(event) {
+    if(event.target === modal.dialog) {
+        modal.dialog.close()
     }
 });
 
@@ -86,15 +90,15 @@ function getInitials(name) {
 };
 
 function openUserModal (user) {
- modalStatus.className = `user-status user-status--${user.status}`;
- modalInitials.textContent = getInitials(user.name);
- modalName.textContent = user.name;
- modalEmail.textContent = user.email;
- modalRole.textContent = user.role;
- modalStatus.textContent = user.status;
- modalMemberSince.textContent = user.memberSince;
- modalLastActive.textContent = user.lastActive;
- modal.showModal()
+ modal.status.className = `user-status user-status--${user.status}`;
+ modal.initials.textContent = getInitials(user.name);
+ modal.name.textContent = user.name;
+ modal.email.textContent = user.email;
+ modal.role.textContent = user.role;
+ modal.status.textContent = user.status;
+ modal.memberSince.textContent = user.memberSince;
+ modal.lastActive.textContent = user.lastActive;
+ modal.dialog.showModal()
 }
 
 function renderUsers(list) {
