@@ -123,9 +123,7 @@
               />
             </div>
             <select class="searching-selector" name="" id="">
-              <option class="searching-menu" value="">
-                All statuses
-              </option>
+              <option class="searching-menu" value="">All statuses</option>
               <option class="searching-menu" value="active">Active</option>
               <option class="searching-menu" value="inactive">Inactive</option>
             </select>
@@ -156,6 +154,54 @@
         <p class="footer-text">Select a user to view their details.</p>
       </main>
     </div>
+
+    <dialog class="modal" aria-labelledby="title-modal-window">
+      <header class="modal-header">
+        <h2 class="modal-title" id="title-modal-window">User details</h2>
+        <button class="modal-close" id="modal-close" aria-label="Close modal window">
+          <img class="modal-close-icon" src="images/x.svg" alt="" />
+        </button>
+      </header>
+
+      <section class="modal-body">
+        <div class="modal-user">
+          <span class="modal-initials" id="modal-initials" >MC</span>
+          <div class="modal-user-info">
+            <span class="modal-user-name" id="modal-name">Maya Chen</span>
+            <span class="modal-workspace">Acme Studio</span>
+          </div>
+        </div>
+        <dl class="modal-details">
+          <div class="modal-detail modal-detail--width">
+            <dt class="modal-label">Email address</dt>
+            <dd class="modal-value" id="modal-email">maya.chen@acme.example</dd>
+          </div>
+          <div class="modal-detail">
+            <dt class="modal-label">Role</dt>
+            <dd class="modal-value" id="modal-role">Admin</dd>
+          </div>
+          <div class="modal-detail">
+            <dt class="modal-label">Status</dt>
+            <dd class="modal-value">
+              <span class="user-status user-status--active" id="modal-status">Active</span>
+            </dd>
+          </div>
+          <div class="modal-detail">
+            <dt class="modal-label">Member Since</dt>
+            <dd class="modal-value" id="modal-member-since">Sep 12,2025</dd>
+          </div>
+          <div class="modal-deteil">
+            <dt class="modal-label">Last active</dt>
+            <dd class="modal-value" id="modal-last-active">Today,9:41 AM</dd>
+          </div>
+        </dl>
+      </section>
+
+      <footer class="modal-footer">
+        <button class="modal-button" id="modal-close-button">Close</button>
+      </footer>
+    </dialog>
+
     <script src="js/script.js"></script>
   </body>
 </html>
